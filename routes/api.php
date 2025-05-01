@@ -3,14 +3,14 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\lectorController;
+use App\Http\Controllers\LectorController;
 
-Route::get("/lectores", [lectorController::class, 'get']);
+Route::get("/lectores", [LectorController::class, 'index']);
 
-Route::get("/lector/{id}", [lectorController::class, 'getById']);
+Route::get("/lector/{id}", [LectorController::class, 'show']);
 
-Route::post("/lector", [lectorController::class, 'create']);
+Route::post("/lector", [LectorController::class, 'store']);
 
-Route::patch("/lector/{id}", [lectorController::class, 'update']);
+Route::patch("/lector/{id}", [LectorController::class, 'update']);
 
-Route::delete("/lector/{id}", [lectorController::class, 'delete']);
+Route::delete("/lector/{id}", [LectorController::class, 'destroy']);
